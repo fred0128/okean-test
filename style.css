@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #cecece;
+    font-family: "Poppins", serif;
+    font-style: normal
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #ff000020;
+    
+}
+
+.sect-header {
+    font-size: 64px;
+    font-weight: 800;
+    background-color: #00000000;
+    width: fit-content;
+    backdrop-filter: blur(6px);
+    border-radius: 99px;
+    padding: 0 12px;
+}
+
+.sect-paragraf {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 12px;
+    backdrop-filter: blur(4px);
+    width: fit-content;
+    border-radius: 99px;
+}
+
+.section-1 {
+    background-image: url(assets/room-img-1.jpg);
+    background-size: cover;
+    box-shadow: 0 0 200px #000 inset;
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.sect-1-reservation {
+    width: fit-content;
+    padding: 16px 24px;
+    border: 2px solid #fff;
+    background-color: #00000020;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    margin: 12px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: .2s all ease-in-out;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.sect-1-reservation:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: #fff;
+    padding-bottom: 20px; 
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
